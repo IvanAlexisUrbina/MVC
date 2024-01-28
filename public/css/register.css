@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.good{
+  border-color: greenyellow;
+}
+.bad{
+  border-color: red;
+}
+.errorActive {
+  display: block;
+  color: red;
+}
+
+.error{
+display: none;
+}
+
+/* Estilos para cuando el campo confirm_password es válido */
+.procesobueno {
+  border: 2px solid green; /* Bordes verdes */
+  background-color: #f0fff0; /* Fondo verde claro */
+}
+
+/* Estilos para cuando el campo confirm_password es inválido */
+.procesomalo {
+  border: 2px solid red; /* Bordes rojos */
+  background-color: #ffe6e6; /* Fondo rojo claro */
+}
+
+/* Estilos para el mensaje de error */
+.error {
+  display: none; /* Ocultar el mensaje de error por defecto */
+  color: red; /* Color de texto rojo */
+  font-size: 12px; /* Tamaño de fuente pequeño */
+  margin-top: 4px; /* Margen superior para separar el mensaje del campo */
+}
+
+/* Estilos para mostrar el mensaje de error cuando se agrega la clase "error-activo" */
+.error-activo {
+  display: block; /* Mostrar el mensaje de error */
+  z-index: 100000000;
+}
+
+
