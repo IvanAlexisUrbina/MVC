@@ -9,9 +9,6 @@ Class AccessModel extends MasterModel
 {
 
 
-
-
-
     public function userExistence(string $email, string $password) {
         $sql = "SELECT u_id, u_name, u_lastname, u_pass FROM users WHERE u_email = :email";
         $params = [':email' => $email];
@@ -27,13 +24,11 @@ Class AccessModel extends MasterModel
             $storedPassword = $user['u_pass'];
             
             if (password_verify($password, $storedPassword)) {
-                $code = $this->generateCode($user['u_id'], $email);
                 $response['success'] = true;
                 $response['message'] = 'Autenticación exitosa';
                 $response['data'] = [
                     'name' => $user['u_name'],
                     'lastname' => $user['u_lastname'],
-                    'code' => $code
                 ];
             } else {
                 $response['message'] = 'Contraseña incorrecta';
@@ -46,21 +41,11 @@ Class AccessModel extends MasterModel
     }
     
     
-        
-        private function generateCode(int $id, string $email){
-            $bytes = openssl_random_pseudo_bytes(8);
-            $code = bin2hex($bytes);
-            $sql = "UPDATE users SET u_code= :code WHERE u_id=:id AND u_email=:email";
-            $params = [':code' => $code,':id'=>$id,':email'=>$email];
-            $result = $this->select($sql, $params);
-            return $code;
-        }
-        
         //init session
-        public function ValidationUser(string $u_email,string $u_pass, string $code){
+        public function ValidationUser(string $u_email,string $u_pass){
 
             $sql = "SELECT u_pass,u_id FROM users WHERE u_email = :email AND u_code=:code";
-            $params = [':email' => $u_email,':code'=>$code];
+            $params = [':email' => $u_email];
 
             $result = $this->select($sql, $params);
         if ($result && count($result) > 0) {
@@ -83,11 +68,7 @@ Class AccessModel extends MasterModel
                         'CityUser' =>$d['u_city'],
                         'RolUser' => $d['rol_id'],
                         'RolName' => $d['rol_name'],
-                        'idUser' =>  $d['u_id'],
-                        'CompanyName'=>$d['c_name'],
-                        'StatusUser'=>$d['status_id'],
-                        'StatusCompany'=>$d['status_id'],
-                        'IdCompany'=>$d['c_id']
+                        'idUser' =>  $d['u_id'],      
                     );
                 }
                 return $sessionData;
@@ -101,14 +82,10 @@ Class AccessModel extends MasterModel
         
             $sql = "SELECT users.u_id, users.u_name, users.u_lastname, users.u_email, users.u_document,
             users.u_phone, users.u_city, users.u_country, users.rol_id,
-            roles.rol_name, company.c_name, company.status_id as status_company, company.c_id, status.status_id
+            roles.rol_nam
             FROM (users 
             INNER JOIN roles 
             ON users.rol_id = roles.rol_id)
-            INNER JOIN company
-            ON users.c_id = company.c_id
-            INNER JOIN status
-            ON status.status_id = users.status_id
             WHERE users.u_email = :email 
             AND users.u_id = :id";
         $params = [':email' => $u_email, ':id' => $u_id];

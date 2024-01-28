@@ -29,9 +29,7 @@ class AccessController
             if ($_SESSION['StatusUser'] == 1 || $_SESSION['StatusCompany'] == 1) {
                 $_SESSION['nameUser'] = $execute['nameUser'];      
                 $_SESSION['LastNameUser'] = $execute['LastNameUser'];
-                $_SESSION['CompanyName'] = $execute['CompanyName'];
                 $_SESSION['UserNumDocument'] = $execute['UserNumDocument'];
-                $_SESSION['IdCompany'] = $execute['IdCompany'];
                 $_SESSION['EmailUser'] = $execute['EmailUser'];
                 $_SESSION['PhoneUser'] = $execute['PhoneUser'];
                 $_SESSION['CountryUser'] = $execute['CountryUser'];

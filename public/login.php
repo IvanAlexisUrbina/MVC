@@ -51,7 +51,7 @@ use function Helpers\generateUrl;
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css">
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css">
-    <link rel="stylesheet" href="../assets/css/demo.css">
+  
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
@@ -98,9 +98,6 @@ use function Helpers\generateUrl;
                             </a>
                         </div>
                         <!-- /Logo -->
-
-                        <h1 class="codediv text-center">Código de validación</h1>
-
                         <form action="<?= generateUrl("Access","Access","UserAccess",[],"ajax"); ?>" method="post"
                             id="loginForm">
 
@@ -128,10 +125,6 @@ use function Helpers\generateUrl;
                                    
                                 </div>
                             </div>
-                            <div class="mb-3 hide">
-                                <button id="emailCode" data-url="<?= generateUrl("Access","Access","EmailCode",[],"ajax"); ?>" class="btn btn-dark d-grid w-100 " type="button">Enviar</button>
-                            </div>
-
                         </form>
 
                         <!-- <p class="text-center">
