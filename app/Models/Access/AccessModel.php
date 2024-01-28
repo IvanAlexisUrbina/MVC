@@ -44,10 +44,10 @@ Class AccessModel extends MasterModel
         //init session
         public function ValidationUser(string $u_email,string $u_pass){
 
-            $sql = "SELECT u_pass,u_id FROM users WHERE u_email = :email AND u_code=:code";
+            $sql = "SELECT u_pass,u_id FROM users WHERE u_email = :email";
             $params = [':email' => $u_email];
-
             $result = $this->select($sql, $params);
+            
         if ($result && count($result) > 0) {
             $passHash = $result[0]['u_pass'];
             $u_id = $result[0]['u_id'];
@@ -82,7 +82,7 @@ Class AccessModel extends MasterModel
         
             $sql = "SELECT users.u_id, users.u_name, users.u_lastname, users.u_email, users.u_document,
             users.u_phone, users.u_city, users.u_country, users.rol_id,
-            roles.rol_nam
+            roles.rol_name
             FROM (users 
             INNER JOIN roles 
             ON users.rol_id = roles.rol_id)

@@ -51,7 +51,7 @@ use function Helpers\generateUrl;
     <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css">
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css">
-  
+ 
 
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css">
@@ -98,6 +98,9 @@ use function Helpers\generateUrl;
                             </a>
                         </div>
                         <!-- /Logo -->
+
+                        <h1 class="text-center">Inicio de Sesión</h1>
+
                         <form action="<?= generateUrl("Access","Access","UserAccess",[],"ajax"); ?>" method="post"
                             id="loginForm">
 
@@ -125,6 +128,10 @@ use function Helpers\generateUrl;
                                    
                                 </div>
                             </div>
+                            <div class="mb-3 hide">
+                                <button class="btn btn-dark d-grid w-100 " type="submit">Entrar</button>
+                            </div>
+
                         </form>
 
                         <!-- <p class="text-center">

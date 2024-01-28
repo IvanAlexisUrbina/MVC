@@ -1,3 +1,7 @@
 #logoSideBar{
-  width: inherit;
+  /* width: inherit; */
+  height: 70px !important;
+  width: 100px;
+  margin: auto;
+  margin-bottom:10px;
 }
