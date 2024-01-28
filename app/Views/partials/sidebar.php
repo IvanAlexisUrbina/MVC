@@ -29,7 +29,7 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
+                    <a href="<?= Helpers\generateUrl("Account","Account","list");?>" class="menu-link">
                         <div data-i18n="Without menu">Ver</div>
                     </a>
                 </li>

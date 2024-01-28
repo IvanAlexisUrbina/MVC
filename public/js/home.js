@@ -34,3 +34,16 @@ setTimeout(function () {
 setTimeout(function () {
     addMessage('Soporte', 'Claro, ¿puedes proporcionar más detalles?');
 }, 3000);
+
+
+
+
+
+
+$(document).ready(function(){
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    });
+});
+
