@@ -22,7 +22,7 @@
 
     // Cabecera de ETag
     header("ETag: " . md5(rand()));
-
+    use function Helpers\generateUrl;
     include_once '../app/Views/partials/header.php';
 ?>
 

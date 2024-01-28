@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business And Connection</title>
+    <title>Parking App</title>
     <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../vendor/fortawesome/font-awesome/css/all.min.css">
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
@@ -49,5 +49,6 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <!-- select -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>

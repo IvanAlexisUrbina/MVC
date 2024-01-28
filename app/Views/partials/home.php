@@ -1,5 +1,5 @@
 <?php
-use function Helpers\generateUrl;
+
 if (isset($_SESSION['welcome']) && $_SESSION['welcome'] == false) {
     echo "
     <div class='container text-focus-in'>
@@ -14,7 +14,7 @@ if (isset($_SESSION['welcome']) && $_SESSION['welcome'] == false) {
 ?>
 <div class="container">
 
-
+<img src="img/map.jpg" alt="">
 
 </div>
 

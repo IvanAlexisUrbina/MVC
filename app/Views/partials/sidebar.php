@@ -30,7 +30,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
-                        <div data-i18n="Without menu">Ver clientes portal</div>
+                        <div data-i18n="Without menu">Ver</div>
                     </a>
                 </li>
             </ul>
@@ -45,7 +45,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
-                        <div data-i18n="Without menu">Ver clientes portal</div>
+                        <div data-i18n="Without menu">Ver </div>
                     </a>
                 </li>
             </ul>
@@ -60,7 +60,7 @@
             <ul class="menu-sub">
                 <li class="menu-item">
                     <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
-                        <div data-i18n="Without menu">Ver clientes portal</div>
+                        <div data-i18n="Without menu">Ver</div>
                     </a>
                 </li>
             </ul>

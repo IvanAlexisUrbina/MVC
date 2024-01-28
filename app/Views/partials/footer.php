@@ -5,21 +5,9 @@
 <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
 
 <!-- <script src="js/modal.js"></script> -->
-<script src="js/profile.js"></script>
-<script src="js/articles.js"></script>
-<script src="js/quote.js"></script>
-<script src="js/order.js"></script>
-<script src="js/inbox.js"></script>
-<script src="js/clients.js"></script>
-<script src="js/reports.js"></script>
+
 <script src="js/home.js"></script>
-<script src="js/settings.js"></script>
-<script src="js/registerupdate.js"></script>
-<script src="js/stock.js"></script>
-<script src="js/groups.js"></script>
-<script src="js/warehouse.js"></script>
-<script src="js/crm.js"></script>
-<script src="js/request.js"></script>
+
 
 <!-- Helpers -->
 <script src="../assets/vendor/js/helpers.js"></script>
