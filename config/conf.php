@@ -4,7 +4,7 @@
     $host="localhost";
     $username="root";
     $password="";
-    $dbname="bac2";
+    $dbname="mvc";
     $port="3306";
     $charset ='utf8mb4'; 
     

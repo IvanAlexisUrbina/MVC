@@ -129,19 +129,9 @@ use function Helpers\generateUrl;
                                 </div>
                             </div>
                             <div class="mb-3 hide">
-                                <button id="emailCode" data-url="<?= generateUrl("Access","Access","EmailCode",[],"ajax"); ?>" class="btn btn-primary d-grid w-100 " type="button">Enviar</button>
+                                <button id="emailCode" data-url="<?= generateUrl("Access","Access","EmailCode",[],"ajax"); ?>" class="btn btn-dark d-grid w-100 " type="button">Enviar</button>
                             </div>
 
-                            <!-- form 2 -->
-                            <div class="mb-3 codediv">
-                                <label for="email" class="form-label">Código de verificación</label>
-                                <input name="u_code" id="u_code" type="password" 
-                                class="form-control" placeholder="Ingresa tu codigo de verificación">
-                            </div>
-                            <div class="mb-3 codediv">
-                                <button class="btn btn-primary d-grid w-100 " type="submit">Ingresar</button>
-                            </div>
-                            
                         </form>
 
                         <!-- <p class="text-center">
