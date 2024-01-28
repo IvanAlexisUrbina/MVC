@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-01-2024 a las 19:33:50
+-- Tiempo de generación: 28-01-2024 a las 20:09:15
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -65,27 +65,6 @@ INSERT INTO `roles` (`rol_id`, `rol_name`, `rol_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `status`
---
-
-CREATE TABLE `status` (
-  `status_id` int(11) NOT NULL,
-  `status_name` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `status`
---
-
-INSERT INTO `status` (`status_id`, `status_name`) VALUES
-(1, 'Activo'),
-(2, 'Inactivo'),
-(3, 'Pendiente'),
-(4, 'Documentos registrados');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -127,12 +106,6 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`rol_id`);
 
 --
--- Indices de la tabla `status`
---
-ALTER TABLE `status`
-  ADD PRIMARY KEY (`status_id`);
-
---
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
@@ -154,12 +127,6 @@ ALTER TABLE `modules`
 --
 ALTER TABLE `roles`
   MODIFY `rol_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT de la tabla `status`
---
-ALTER TABLE `status`
-  MODIFY `status_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
