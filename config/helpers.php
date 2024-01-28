@@ -58,6 +58,33 @@ function generateUrl(string $module, string $controller, string $action, array $
     return $url;
 }
 
+
+    /**
+     * Incluye la vista basada en la carpeta y el nombre del archivo.
+     *
+     * @param string $folder Nombre de la carpeta (puede incluir subcarpetas).
+     * @param string $file   Nombre del archivo sin la extensión.
+     */
+
+function view($folder, $file, $data = [])
+{
+    // Construir la ruta completa del archivo
+    $path = __DIR__ . "/../app/Views/{$folder}/{$file}.php";
+
+    // Verificar si el archivo existe antes de incluirlo
+    if (file_exists($path)) {
+        // Extraer las variables del array de datos
+        extract($data);
+
+        // Incluir la vista
+        include_once $path;
+    } else {
+        // Manejar el caso en el que el archivo no existe
+        echo "La vista no se encuentra: {$folder}/{$file}.php";
+    }
+}
+
+
 function resolve(){
     //module:Carpetas que estan dentro del controlador
     //controlador: un archivo controller que esta dentro del modulo

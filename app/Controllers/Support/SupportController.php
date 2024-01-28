@@ -5,14 +5,13 @@ use function Helpers\generateUrl;
 use function Helpers\redirect;
 use function Helpers\view;
 
-class MapController
+class SupportController
 {
  
     
-    
-    
-   public function listReservations(){
-        view('reservations', 'list'); 
+
+   public function chatSupport(){
+        view('support', 'list'); 
    }
 }
 

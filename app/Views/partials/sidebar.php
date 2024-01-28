@@ -44,7 +44,7 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
+                    <a href="<?= Helpers\generateUrl("Map","Map","listReservations");?>" class="menu-link">
                         <div data-i18n="Without menu">Ver </div>
                     </a>
                 </li>
@@ -59,7 +59,7 @@
 
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="<?= Helpers\generateUrl("Clients","Clients","ViewClientPortal");?>" class="menu-link">
+                    <a href="<?= Helpers\generateUrl("Support","Support","chatSupport");?>" class="menu-link">
                         <div data-i18n="Without menu">Ver</div>
                     </a>
                 </li>
